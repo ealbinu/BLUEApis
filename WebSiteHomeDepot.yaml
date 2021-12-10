@@ -19,8 +19,12 @@ paths:
       tags:
       - General
       summary: Login
-      parameters:
-        
+      requestBody:
+        content:
+          application/json:  
+            schema:
+              $ref: #/components/DataParticipate
+      
       responses:
         default:
           content: {}
@@ -32,27 +36,27 @@ paths:
       parameters:
       servers:
         - url: https://api.ipify.org 
-      schema:
-        $ref: #/definitions/DataParticipate
-definitions:
-  DataParticipate:
-    type: object
-    properties:
-      IPAddress:
-        type: string
-        example: 104.28.50.32
-      Email:
-        type: string
-        example: text@test.com
-      CellPhone:
-        type: string
-        example: 5583049909
-      FirstName:
-        type: string
-        example: FN
-      LastName:
-        type: string
-        example: LN
-      LastName2:
-        type: string
-        example: LN2
+      
+components:
+  schemas:
+    DataParticipate:
+      type: object
+      properties:
+        IPAddress:
+          type: string
+          example: 104.28.50.32
+        Email:
+          type: string
+          example: text@test.com
+        CellPhone:
+          type: string
+          example: 5583049909
+        FirstName:
+          type: string
+          example: FN
+        LastName:
+          type: string
+          example: LN
+        LastName2:
+          type: string
+          example: LN2
