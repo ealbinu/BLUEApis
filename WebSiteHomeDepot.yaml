@@ -1,0 +1,74 @@
+openapi: 3.0.1
+info:
+  description: "Juegos: Pintura"
+  version: "1.0"
+  title: "The Home Depot"
+servers:
+  - url: https://testing4.myblueengine.com/WebSiteHomeDepot/Services.aspx
+    description: Development
+tags:
+- name: "General"
+  description: "Apis"
+- name: "Utilidades"
+  description: "Apis"
+
+paths:
+
+  /SetDataParticipate:
+    post:
+      tags:
+      - General
+      summary: Login
+      parameters:
+        - name: IPAddress
+          in: query
+          description: IP desde ipify.org
+          required: true
+          example: 104.28.50.32
+          schema:
+            type: string
+        - name: Email
+          in: query
+          description: Correo
+          required: true
+          example: test@test.com
+          schema:
+            type: string
+        - name: CellPhone
+          in: query
+          description: Teléfono celular
+          required: true
+          example: 5583049909
+          schema:
+            type: string
+        - name: FirstName
+          in: query
+          description: Nombre
+          required: true
+          example: Test FN
+          schema:
+            type: string
+        - name: LastName
+          in: query
+          description: Apellido paterno
+          required: true
+          example: Test LN
+          schema:
+            type: string
+        - name: LastName2
+          in: query
+          description: Apellido materno
+          required: true
+          example: Test LN2
+          schema:
+            type: string
+      responses:
+        default:
+          content: {}
+  /:
+    get:
+      tags: Utilidades
+      summary: Obtener IP
+      servers:
+        - url: https://api.ipify.org
+        description: Servicio externo
