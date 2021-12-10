@@ -8,9 +8,9 @@ servers:
     description: Development
 tags:
 - name: "General"
-  description: "Apis"
+  description: "Web Services"
 - name: "Utilidades"
-  description: "Apis"
+  description: "APIs externas"
 
 paths:
 
@@ -65,3 +65,7 @@ paths:
       responses:
         default:
           content: {}
+  /:
+    get:
+      tags: Utilidades
+      summary: Obtener IP
