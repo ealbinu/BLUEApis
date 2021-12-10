@@ -65,10 +65,3 @@ paths:
       responses:
         default:
           content: {}
-  /:
-    get:
-      tags: Utilidades
-      summary: Obtener IP
-      servers:
-        - url: https://api.ipify.org
-          description: Servicio externo
