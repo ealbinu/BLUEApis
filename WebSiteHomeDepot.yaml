@@ -19,12 +19,14 @@ paths:
       tags:
       - General
       summary: Login
+      operationID: createDataParticipate
       requestBody:
+        description: Manda información capturada en formulario de usuario
         content:
-          application/json:  
+          application/json:
             schema:
-              $ref: #/components/DataParticipate
-      
+              $ref: #/components/schemas/DataParticipate
+        required: true
       responses:
         default:
           content: {}
