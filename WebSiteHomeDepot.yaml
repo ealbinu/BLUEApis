@@ -40,6 +40,13 @@ paths:
 components:
   schemas:
     DataParticipate:
+      required:
+      - IPAddress
+      - Email
+      - CellPhone
+      - FirstName
+      - LastName
+      - LastName2
       type: object
       properties:
         IPAddress:
