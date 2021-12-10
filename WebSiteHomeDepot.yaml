@@ -20,48 +20,24 @@ paths:
       - General
       summary: Login
       parameters:
-        - name: IPAddress
-          in: body
-          description: IP desde ipify.org
-          required: true
+        IPAddress:
+          type: string
           example: 104.28.50.32
-          schema:
-            type: string
-        - name: Email
-          in: body
-          description: Correo
-          required: true
-          example: test@test.com
-          schema:
-            type: string
-        - name: CellPhone
-          in: body
-          description: Teléfono celular
-          required: true
+        Email:
+          type: string
+          example: text@test.com
+        CellPhone:
+          type: string
           example: 5583049909
-          schema:
-            type: string
-        - name: FirstName
-          in: body
-          description: Nombre
-          required: true
-          example: Test FN
-          schema:
-            type: string
-        - name: LastName
-          in: body
-          description: Apellido paterno
-          required: true
-          example: Test LN
-          schema:
-            type: string
-        - name: LastName2
-          in: body
-          description: Apellido materno
-          required: true
-          example: Test LN2
-          schema:
-            type: string
+        FirstName:
+          type: string
+          example: FN
+        LastName:
+          type: string
+          example: LN
+        LastName2:
+          type: string
+          example: LN2
       responses:
         default:
           content: {}
