@@ -1,0 +1,75 @@
+openapi: 3.0.1
+info:
+  description: "API de proyecto GATES"
+  version: "1.0"
+  title: "Gates Segutal"
+servers:
+  - url: http://prepro-back-aws.segutalmexico.com/api
+    description: Development
+  - url: http://my-production-aws.segutalmexico.com/api
+    description: Production
+tags:
+- name: "Auth"
+  description: "Autenticación de usuarios"
+- name: "Viajes"
+  description: ""
+- name: "Liquidaciones"
+  description: ""
+- name: "Reportes"
+  description: ""
+
+- name: "Finanzas"
+  description: ""
+- name: "Registros"
+  description: "Servicios, Empleados, Unidad Motriz, Arrastre, Mercancía, Proveedores, Base, Cliente, Utilitarias."
+- name: "Covid"
+  description: "Usuario y Admin."
+- name: "Equipos"
+  description: ""
+- name: "Capacitación"
+  description: "Usuario y Admin."
+- name: "Dashboard"
+  description: "Panel de administración."
+paths:
+
+  /login:
+    post:
+      tags:
+      - Auth
+      summary: Login
+      parameters:
+        - name: email
+          in: query
+          description: Correo electrónico
+          required: true
+          example: albin.rodriguez@segutalmexico.com
+          schema:
+            type: string
+        - name: password
+          in: query
+          description: Contraseña
+          required: true
+          example: qwerty12345
+          schema:
+            type: string
+      responses:
+        default:
+          content: {}
+
+  /viajes:
+    get:
+      tags: 
+        - Viajes
+      summary: Obtener viajes paginados
+      parameters:
+        - name: page
+          in: query
+          description: Número de página
+          required: true
+          example: 1
+          schema:
+            type: number
+      responses:
+        default:
+          content: {}
+
