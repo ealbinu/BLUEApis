@@ -67,5 +67,9 @@ paths:
           content: {}
   /:
     get:
-      tags: Utilidades
+      tags:
+      - Utilidades
       summary: Obtener IP
+      parameters:
+      servers:
+        - url: https://api.ipify.org 
