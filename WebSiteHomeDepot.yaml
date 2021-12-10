@@ -71,4 +71,4 @@ paths:
       summary: Obtener IP
       servers:
         - url: https://api.ipify.org
-        description: Servicio externo
+          description: Servicio externo
